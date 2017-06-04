@@ -55,3 +55,4 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem "font-awesome-rails"
 gem "paperclip"
+gem "pg"
