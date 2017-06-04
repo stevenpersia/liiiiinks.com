@@ -1,0 +1,375 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap-custom";
+@import "font-awesome";
+
+html, body, header, footer, section, nav, div, h1, h2, h3, h4, ul, li, img {
+  margin: 0;
+  padding: 0;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul, li {
+  list-style: none;
+}
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  border-style: solid;
+  border-width: 0;
+  &::after, &::before {
+    box-sizing: inherit;
+    border-style: solid;
+    border-width: 0;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  color: #4F4F4F;
+}
+
+header {
+  h1 {
+    position: relative;
+  }
+  a {
+    display: block;
+  }
+  height: 74px;
+  background-color: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(51, 73, 94, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.resource-list {
+  li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 30px 0;
+  }
+  .resource-icon {
+    position: relative;
+    margin: 0 30px 0 0;
+    width: 96px;
+    height: 96px;
+    &:hover::before {
+      font-family: FontAwesome;
+      content: '\f0c1';
+      color: #000;
+      border-radius: 50%;
+      padding: 23px 0 0 32px;
+      position: absolute;
+      font-size: 35px;
+    }
+    img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .resource-icon2 {
+    position: relative;
+    margin: 0 auto;
+    width: 96px;
+    height: 96px;
+    img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+    }
+  }
+  .resource-icon-add {
+    position: relative;
+    border: 5px dashed #CCC;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+    width: 96px;
+    height: 96px;
+    font-size: 35px;
+    padding: 16px 0 0 30px;
+  }
+}
+
+.addone span {
+  color: #DEDEDE;
+  background: #DEDEDE;
+  line-height: 28px;
+  cursor: default;
+}
+
+.resource-details {
+  margin-top: 5px;
+}
+
+.resource-list {
+  a {
+    .resource-icon-add {
+      color: #CCC;
+    }
+    &:hover .resource-icon-add {
+      color: #4F4F4F;
+      border: 5px dashed #DDD;
+      background: #FFF;
+    }
+  }
+  h2 {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    margin: 0 0 5px 0;
+    color: #4F4F4F;
+  }
+  p {
+    font-size: 18px;
+    color: #4F4F4F;
+    text-align: justify;
+  }
+}
+
+.sidebar-navigation {
+  display: block;
+  margin: 0 0 0 30px;
+  border-left: 1px solid #EAEDEF;
+  padding: 0 0 0 30px;
+  li {
+    margin: 0 0 15px 0;
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 14px;
+      color: #4F4F4F;
+      text-transform: uppercase;
+    }
+    .selected {}
+    .circle {
+      margin: 1px 8px 0 0;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background-color: #DDD;
+      display: inline-block;
+      vertical-align: sub;
+    }
+    .circle-add {
+      margin: 1px 8px 0 0;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      border: 1px dashed #BBB;
+      display: inline-block;
+      vertical-align: sub;
+    }
+  }
+}
+
+.resource-head {
+  display: inline-block;
+}
+
+.actions2 {
+  display: none;
+  margin-left: 15px;
+  color: #4F4F4F;
+  font-size: 14px;
+  vertical-align: text-bottom;
+}
+
+.actions2 a {
+  color: #4F4F4F;
+}
+
+.resource-details:hover .actions2 {
+  display: inline-block;
+  margin-left: 15px;
+  color: #4f4f4f;
+}
+
+.sidebar-navigation li:hover .actions2 {
+  display: inline;
+  margin-left: 10px;
+  color: #4f4f4f;
+  vertical-align: text-bottom;
+}
+
+.light {
+  li a {
+    color: #FFF;
+  }
+  border: 0;
+}
+
+.form-signin {
+    max-width: 400px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.hidden-xs-up {
+  display: none !important;
+}
+
+@media (max-width: 575px) {
+  .hidden-xs-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-sm-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidden-xl-up {
+    display: none !important;
+  }
+}
+
+.hidden-xl-down {
+  display: none !important;
+}
+
+.visible-print-block {
+  display: none !important;
+}
+
+@media print {
+  .visible-print-block {
+    display: block !important;
+  }
+}
+
+.visible-print-inline {
+  display: none !important;
+}
+
+@media print {
+  .visible-print-inline {
+    display: inline !important;
+  }
+}
+
+.visible-print-inline-block {
+  display: none !important;
+}
+
+@media print {
+  .visible-print-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}
