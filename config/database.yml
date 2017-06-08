@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: bcf8cdb3c9abb8
   password: c97e3e90
-  host: localhost
+  url: <%= ENV["CLEARDB_DATABASE_URL"] %>
 
 development:
   <<: *default
