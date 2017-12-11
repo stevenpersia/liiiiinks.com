@@ -48,6 +48,12 @@
     <% end %>
     <% end %>
 
+    <% if can? :approve, Link %>
+    <%= link_to links_approved_path do %>
+    <div class="btnaddtop2"><i class="icon3 icon-accept"></i> <span>En attente</span></div>
+    <% end %>
+    <% end %>
+
 
   </div>
 </div>

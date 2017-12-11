@@ -5,8 +5,15 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.limit(30)
+    @links = Link.limit(30).where(approved: true)
     @categories = Category.all
+  end
+
+  # APPROVE FOR ADMIN
+  def approve
+  if can? :approve, Link
+    @link.update_attributes approved: true
+  end
   end
 
   # GET /links/1
@@ -74,6 +81,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:name, :link, :category_id, :logo, :textlink)
+      params.require(:link).permit(:name, :link, :category_id, :logo, :textlink, :approved)
     end
 end

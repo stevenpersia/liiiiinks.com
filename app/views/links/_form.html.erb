@@ -47,6 +47,12 @@
     <% end %>
     <% end %>
 
+    <% if can? :approve, Link %>
+    <%= link_to links_approved_path do %>
+    <div class="btnaddtop2"><i class="icon3 icon-accept"></i> <span>En attente</span></div>
+    <% end %>
+    <% end %>
+
 
   </div>
 </div>
@@ -55,6 +61,9 @@
   <div class="form-signin">
     <h4 class="little2">
       <span>Lien</span>
+    </h4>
+    <h4 class="little3" style="line-height: 18px;">
+      Après contrôle, l'équipe de modérateur publiera votre lien sous 72h.
     </h4>
 <%= form_for(link, multipart: true) do |f| %>
   <% if link.errors.any? %>
@@ -89,7 +98,11 @@
   <div class="form-group">
     <%= select_tag(:category_id, options_for_select(@categories), :class => 'custom-select form-control-lg w100') %>
   </div>
-
+  <% if can? :approve, Link %>
+  <div class="form-group">
+  <%= f.check_box :approved %> Mettre en ligne le site
+  </div>
+  <% end %>
   <div class="form-group" style="display:none;">
   <%= f.file_field :logo, {:class => 'form-control form-control-lg'} %>
   </div>

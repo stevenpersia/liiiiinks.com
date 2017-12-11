@@ -93,6 +93,12 @@
     <div class="btnaddtop2"><i class="icon3 icon-members"></i> <span>Membres</span></div>
     <% end %>
     <% end %>
+    
+    <% if can? :approve, Link %>
+    <%= link_to links_approved_path do %>
+    <div class="btnaddtop2"><i class="icon3 icon-accept"></i> <span>En attente</span></div>
+    <% end %>
+    <% end %>
 
 
   </div>
@@ -141,7 +147,7 @@
    </div>
      <div class="vertical-contents">
      <div class="row" style="padding-left: 20px;">
-            <% Link.where(category_id: @category.id).reverse_each do |link| %>
+            <% Link.where(category_id: @category.id).where(approved: true).reverse_each do |link| %>
             <div class="col-md-6 border">
               <div class="icon-box icon-box-left">
                 <div class="icon-box-icon fa-container">
