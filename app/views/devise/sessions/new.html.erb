@@ -8,7 +8,7 @@
                     </h1>
                     <% end %>
                     <h4 class="little">
-                      <span>Ajouter / Modifier une catégorie</span>
+                      <span>Se connecter au site et partager ses liens favoris</span>
                     </h4>
                     <span class="badge badge-success" style="vertical-align: super;"><%= notice %></span>
                     <span class="badge badge-alert" style="vertical-align: super;"><%= alert %></span>
@@ -31,49 +31,33 @@
     <% end %>
     <% end %>
 
-    <% if user_signed_in? %>
-    <%= link_to(destroy_user_session_path, :method => :delete) do %>
-    <div class="btnaddtop2"><i class="icon3 icon-logout"></i> <span>Se déconnecter</span></div>
-    <% end %>
-    <% else %>
-    <%= link_to(new_user_session_path) do %>
-    <div class="btnaddtop2"><i class="icon3 icon-login"></i> <span>Se connecter</span></div>
-    <% end %>
-    <% end %>
-
   </div>
 </div>
 
 <div class="container" style="background-color:#FFF;overflow:auto;padding:36px 36px 36px 36px;margin-top:-150px;">
-  <div class="form-signin">
-    <h4 class="little2">
-      <span>Catégorie</span>
-    </h4>
-<%= form_for(category) do |f| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<div class="form-signin">
+  <h4 class="little2">
+    <span>Connexion</span>
+  </h4>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group">
+    <%= f.email_field :email, {:class => 'form-control form-control-lg', :placeholder => 'Adresse e-mail', :required => true} %>
+  </div>
 
-      <ul>
-      <% category.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <div class="form-group">
+    <%= f.password_field :password, {:class => 'form-control form-control-lg', :placeholder => 'Mot de passe', :required => true} %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="form-group" style="display:none;">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
     </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.text_field :name, {:class => 'form-control form-control-lg', :placeholder => 'Nom de la catégorie', :required => true} %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :color, {:class => 'form-control form-control-lg', :placeholder => '#FFFFFFF', :required => true} %>
-  </div>
+  <% end -%>
 
   <div class="actions">
-    <%= f.submit 'Enregistrer', :class => 'btn btn-outline-primary hand btn-lg btn-block' %>
+    <%= f.submit 'Se connecter', :class => 'btn btn-outline-primary hand btn-lg btn-block' %>
   </div>
-
 <% end %>
 </div>
 </div>

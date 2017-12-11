@@ -1,5 +1,5 @@
 <div id="page-header"style="background-color:#101213;">
-      <div class="row" style="height: 650px; padding-top: 250px;">
+      <div class="row" style="height: 650px; padding-top: 200px;">
 
                   <div class="entete">
                     <%= link_to root_path do %>
@@ -11,13 +11,43 @@
                       <span>Ajouter / Modifier un lien</span>
                     </h4>
                     <span class="badge badge-success" style="vertical-align: super;"><%= notice %></span>
+                    <span class="badge badge-alert" style="vertical-align: super;"><%= alert %></span>
                   </div>
 
       </div>
 </div>
+<div class="container">
+  <div class="row" style="">
+
+    <% if user_signed_in? %>
+    <%= link_to(edit_user_registration_path) do %>
+    <div class="btnaddtop2">
+    <i class="icon3 icon-user"></i> <span>Mon profil</span></div>
+    <% end %>
+    <% else %>
+    <%= link_to(new_user_registration_path) do %>
+    <div class="btnaddtop2"><i class="icon3 icon-register"></i> <span>S'inscrire</span></div>
+    <% end %>
+    <% end %>
+
+    <% if user_signed_in? %>
+    <%= link_to(destroy_user_session_path, :method => :delete) do %>
+    <div class="btnaddtop2"><i class="icon3 icon-logout"></i> <span>Se déconnecter</span></div>
+    <% end %>
+    <% else %>
+    <%= link_to(new_user_session_path) do %>
+    <div class="btnaddtop2"><i class="icon3 icon-login"></i> <span>Se connecter</span></div>
+    <% end %>
+    <% end %>
+
+  </div>
+</div>
 
 <div class="container" style="background-color:#FFF;overflow:auto;padding:36px 36px 36px 36px;margin-top:-150px;">
   <div class="form-signin">
+    <h4 class="little2">
+      <span>Lien</span>
+    </h4>
 <%= form_for(link, multipart: true) do |f| %>
   <% if link.errors.any? %>
     <div id="error_explanation">

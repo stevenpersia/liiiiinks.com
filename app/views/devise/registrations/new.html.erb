@@ -8,7 +8,7 @@
                     </h1>
                     <% end %>
                     <h4 class="little">
-                      <span>Ajouter / Modifier une catégorie</span>
+                      <span>S'inscrire au site et partager ses liens favoris</span>
                     </h4>
                     <span class="badge badge-success" style="vertical-align: super;"><%= notice %></span>
                     <span class="badge badge-alert" style="vertical-align: super;"><%= alert %></span>
@@ -19,17 +19,6 @@
 
 <div class="container">
   <div class="row" style="">
-
-    <% if user_signed_in? %>
-    <%= link_to(edit_user_registration_path) do %>
-    <div class="btnaddtop2">
-    <i class="icon3 icon-user"></i> <span>Mon profil</span></div>
-    <% end %>
-    <% else %>
-    <%= link_to(new_user_registration_path) do %>
-    <div class="btnaddtop2"><i class="icon3 icon-register"></i> <span>S'inscrire</span></div>
-    <% end %>
-    <% end %>
 
     <% if user_signed_in? %>
     <%= link_to(destroy_user_session_path, :method => :delete) do %>
@@ -45,35 +34,29 @@
 </div>
 
 <div class="container" style="background-color:#FFF;overflow:auto;padding:36px 36px 36px 36px;margin-top:-150px;">
-  <div class="form-signin">
-    <h4 class="little2">
-      <span>Catégorie</span>
-    </h4>
-<%= form_for(category) do |f| %>
-  <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<div class="form-signin">
+  <h4 class="little2">
+    <span>Inscription</span>
+  </h4>
 
-      <ul>
-      <% category.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.text_field :name, {:class => 'form-control form-control-lg', :placeholder => 'Nom de la catégorie', :required => true} %>
+    <%= f.email_field :email, {:class => 'form-control form-control-lg', :placeholder => 'Adresse e-mail', :required => true} %>
   </div>
 
   <div class="form-group">
-    <%= f.text_field :color, {:class => 'form-control form-control-lg', :placeholder => '#FFFFFFF', :required => true} %>
+    <%= f.password_field :password, {:class => 'form-control form-control-lg', :placeholder => 'Mot de passe', :required => true} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password_confirmation, {:class => 'form-control form-control-lg', :placeholder => 'Confirmer le mot de passe', :required => true} %>
   </div>
 
   <div class="actions">
     <%= f.submit 'Enregistrer', :class => 'btn btn-outline-primary hand btn-lg btn-block' %>
   </div>
-
 <% end %>
 </div>
 </div>
