@@ -54,7 +54,9 @@
     <%= f.password_field :password_confirmation, {:class => 'form-control form-control-lg', :placeholder => 'Confirmer le mot de passe', :required => true} %>
   </div>
 
-  <div class="actions">
+  <div class="g-recaptcha" data-sitekey="6LekmzwUAAAAAPnDBBSUcn1gj9swwA1JpT-XVMwp"></div>
+
+  <div class="actions" style="margin-top:12px;">
     <%= f.submit 'Enregistrer', :class => 'btn btn-outline-primary hand btn-lg btn-block' %>
   </div>
 <% end %>

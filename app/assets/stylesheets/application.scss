@@ -406,6 +406,10 @@ header {
   content: url(../user.png);
 }
 
+.icon-linkedin:after {
+  content: url(../linkedin.png);
+}
+
 .btnaddtop2 {
   background: #607d8b;
   padding: 10px;
@@ -489,6 +493,18 @@ header {
   font-family: Poppins !important;
   text-transform: uppercase;
   font-weight: 600;
+  padding: 20px 0;
+  text-align:center;
+}
+
+.little3 {
+  color: #000000;
+  letter-spacing: .2em;
+  line-height: 1;
+  font-size: 12px;
+  font-family: Poppins !important;
+  text-transform: uppercase;
+  font-weight: 500;
   padding: 20px 0;
   text-align:center;
 }

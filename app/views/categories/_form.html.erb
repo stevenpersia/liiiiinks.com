@@ -1,24 +1,25 @@
 <div id="page-header"style="background-color:#101213;">
-      <div class="row" style="height: 650px; padding-top: 200px;">
+          <div class="row" style="height: 650px; padding-top: 200px;">
 
-                  <div class="entete">
-                    <%= link_to root_path do %>
-                    <h1 class="titletop">
-                      LIIIIINKS<span>.COM</span>
-                    </h1>
-                    <% end %>
-                    <h4 class="little">
-                      <span>Ajouter / Modifier une catégorie</span>
-                    </h4>
-                    <span class="badge badge-success" style="vertical-align: super;"><%= notice %></span>
-                    <span class="badge badge-alert" style="vertical-align: super;"><%= alert %></span>
-                  </div>
+              <div class="entete">
+                <%= link_to root_path do %>
+                <h1 class="titletop">
+                  LIIIIINKS<span>.COM</span>
+                </h1>
+                <% end %>
+                <h4 class="little">
+                  <span>Ajouter / Modifier une catégorie</span>
+                </h4>
+                <span class="badge badge-success" style="vertical-align: super;"><%= notice %></span>
+                <span class="badge badge-alert" style="vertical-align: super;"><%= alert %></span>
+              </div>
 
-      </div>
-</div>
+          </div>
+    </div>
+
 
 <div class="container">
-  <div class="row" style="">
+  <div class="row">
 
     <% if user_signed_in? %>
     <%= link_to(edit_user_registration_path) do %>
