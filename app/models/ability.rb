@@ -2,6 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    #can :manage, :all
     can :read, Link
     can :read, Category  # start by defining rules for all users, also not logged ones
     return unless user.present?

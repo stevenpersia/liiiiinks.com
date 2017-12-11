@@ -19,6 +19,25 @@ html, body, header, footer, section, nav, div, h1, h2, h3, h4, ul, li, img {
   padding: 0;
 }
 
+.navbar-inverse .navbar-toggler-icon {
+  background-image: url(../burger-menu.png) !important;
+}
+
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width: 753px) {
+.btnaddtop span, .btnaddtop2 span {
+    display: none;
+}
+}
+
 body {
   background: #F7F7F7;
 }
@@ -406,6 +425,10 @@ header {
   content: url(../user.png);
 }
 
+.icon-members:after {
+  content: url(../members.png);
+}
+
 .icon-linkedin:after {
   content: url(../linkedin.png);
 }
@@ -463,6 +486,11 @@ header {
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 500;
 }
+
+.titletop:hover {
+  color: #bdbdbd;
+}
+
 .titletop span {
   color: #ffffff;
   font-size: 35px;

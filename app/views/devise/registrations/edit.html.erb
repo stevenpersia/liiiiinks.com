@@ -36,6 +36,13 @@
     <% end %>
     <% end %>
 
+    <% if can? :manage, User %>
+    <%= link_to users_path do %>
+    <div class="btnaddtop2"><i class="icon3 icon-members"></i> <span>Membres</span></div>
+    <% end %>
+    <% end %>
+
+
   </div>
 </div>
 
