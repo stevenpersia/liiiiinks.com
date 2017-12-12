@@ -31,6 +31,11 @@ html, body, header, footer, section, nav, div, h1, h2, h3, h4, ul, li, img {
     cursor: pointer;
 }
 
+#page-header {
+    background-image: url(../bg-liiiiinks.png);
+    background-size: cover;
+    background-position: bottom;
+}
 
 @media (max-width: 753px) {
 .btnaddtop span, .btnaddtop2 span {
