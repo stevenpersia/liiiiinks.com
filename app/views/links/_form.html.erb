@@ -100,7 +100,7 @@
   </div>
 
   <div class="form-group">
-    <%= select_tag(:category_id, options_for_select(@categories, params[:condition]), :class => 'custom-select form-control-lg w100') %>
+    <%= select_tag(:category_id, options_for_select(@categories), :class => 'custom-select form-control-lg w100') %>
   </div>
   <% if can? :approve, Link %>
   <div class="form-group">
