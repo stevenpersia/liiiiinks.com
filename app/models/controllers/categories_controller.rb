@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @links = Link.all
+    @links = Link.where(approved: true)
     @categories = Category.all
   end
 
