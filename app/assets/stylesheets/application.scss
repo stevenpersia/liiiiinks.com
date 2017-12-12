@@ -433,6 +433,10 @@ header {
   content: url(../accept.png);
 }
 
+.icon-home:after {
+  content: url(../home.png);
+}
+
 .icon-linkedin:after {
   content: url(../linkedin.png);
 }
@@ -568,6 +572,15 @@ p {
   font-size: 15px;
   color: #303133;
   margin-bottom: 5px;
+}
+
+.categorielien {
+  font-weight: 300;
+  font-family: Poppins;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #303133;
+  text-transform: uppercase;
 }
 
 .actions2 a {

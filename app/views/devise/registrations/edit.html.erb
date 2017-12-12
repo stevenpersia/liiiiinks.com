@@ -20,6 +20,10 @@
 <div class="container">
   <div class="row">
 
+    <%= link_to root_path do %>
+    <div class="btnaddtop2"><i class="icon3 icon-home"></i></div>
+    <% end %>
+
     <% if can? :create, Link %>
     <%= link_to new_link_path do %>
     <div class="btnaddtop"><i class="icon3 icon-add"></i> <span>Soumettre un lien</span></div>

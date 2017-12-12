@@ -5,7 +5,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.limit(30).where(approved: true)
+    @links = Link.limit(10).where(approved: true).order('created_at DESC')
     @categories = Category.all
   end
 

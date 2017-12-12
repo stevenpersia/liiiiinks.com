@@ -18,7 +18,11 @@
 </div>
 
   <div class="container">
-    <div class="row" style="">
+    <div class="row">
+
+      <%= link_to root_path do %>
+      <div class="btnaddtop2"><i class="icon3 icon-home"></i></div>
+      <% end %>
 
       <% if can? :create, Link %>
       <%= link_to new_link_path do %>
@@ -70,19 +74,21 @@
   </div>
   <div class="row">
 <% @users.each do |user| %>
-<div class="col-md-4 border">
+<div class="col-md-3 border">
   <div class="icon-box icon-box-left">
     <div class="icon-box-icon fa-container">
       <img src="/user2.png">
     </div>
     <div class="icon-box-content">
       <div class="icon-box-heading icon-box-fa-1x" style="display:inline-block;">
-           <h2><%= user.email %> <%= user.id %>
+           <h2>Membre n° <%= user.id %>
       </div>
-      <p class="description">
-      <p class="text-bold">
-        <a class="btn-link" href="#" target="_blank" rel="nofollow">Voir le profil</a>
-      </p>
+      <p class="description"><%= user.email %></p>
+      <% if user.role == "admin" %>
+      <p class="categorielien" style="color: #c62828;"><%= user.role %></p>
+       <% elsif %>
+      <p class="categorielien">Membre</p>
+      <% end %>
     </div>
   </div>
 </div>

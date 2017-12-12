@@ -1,42 +1,42 @@
 # # Heroku
-#
-# default: &default
-#   adapter: mysql2
-#   encoding: utf8
-#   pool: 5
-#   username: bcf8cdb3c9abb8
-#   password: c97e3e90
-#   url: <%= ENV["CLEARDB_DATABASE_URL"] %>
-#
-# development:
-#   <<: *default
-#   database: heroku_5d43714921fd08f
-#
-# test:
-#   <<: *default
-#   database: heroku_5d43714921fd08f
-#
-# production:
-#   <<: *default
-#   database: heroku_5d43714921fd08f
-#   username: bcf8cdb3c9abb8
-#   password: c97e3e90
-
-# # Local
 
 default: &default
   adapter: mysql2
+  encoding: utf8
   pool: 5
-  timeout: 5000
+  username: bcf8cdb3c9abb8
+  password: c97e3e90
+  url: <%= ENV["CLEARDB_DATABASE_URL"] %>
 
 development:
   <<: *default
-  database: development
+  database: heroku_5d43714921fd08f
 
 test:
   <<: *default
-  database: test
+  database: heroku_5d43714921fd08f
 
 production:
   <<: *default
-  database: production
+  database: heroku_5d43714921fd08f
+  username: bcf8cdb3c9abb8
+  password: c97e3e90
+
+# # Local
+#
+# default: &default
+#   adapter: mysql2
+#   pool: 5
+#   timeout: 5000
+#
+# development:
+#   <<: *default
+#   database: development
+#
+# test:
+#   <<: *default
+#   database: test
+#
+# production:
+#   <<: *default
+#   database: production

@@ -20,6 +20,10 @@
 <div class="container">
   <div class="row">
 
+    <%= link_to root_path do %>
+    <div class="btnaddtop2"><i class="icon3 icon-home"></i></div>
+    <% end %>
+
     <% if user_signed_in? %>
     <%= link_to(edit_user_registration_path) do %>
     <div class="btnaddtop2">
@@ -63,7 +67,7 @@
       <span>Lien</span>
     </h4>
     <h4 class="little3" style="line-height: 18px;">
-      Après contrôle, l'équipe de modérateur publiera votre lien sous 72h.
+      L'équipe de modérateur publiera votre lien sous 72h.
     </h4>
 <%= form_for(link, multipart: true) do |f| %>
   <% if link.errors.any? %>
@@ -100,7 +104,7 @@
   </div>
   <% if can? :approve, Link %>
   <div class="form-group">
-  <%= f.check_box :approved %> Mettre en ligne le site
+  <%= f.check_box :approved %> Publier le site
   </div>
   <% end %>
   <div class="form-group" style="display:none;">
