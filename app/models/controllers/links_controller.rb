@@ -73,6 +73,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:name, :link, :category_id, :textlink)
+      params.require(:link).permit(:name, :link, :category_id, :logo, :textlink, :approved)
     end
 end
