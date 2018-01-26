@@ -53,8 +53,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-gem "font-awesome-rails"
-gem "paperclip", "~> 5.0.0"
+gem 'font-awesome-rails'
+gem 'paperclip', '>= 5.1.0'
 
 # Authentification
 gem 'devise'
