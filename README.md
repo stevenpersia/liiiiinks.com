@@ -3,7 +3,7 @@
 ![alt text](https://forthebadge.com/images/badges/certified-elijah-wood.svg "Certified by Elija Wood")
 ![alt text](https://forthebadge.com/images/badges/built-with-love.svg "Built with <3")
 
-This app made under Ruby on Rails allows to gather a database of links with description and classification in custom categories.
+This application made under Ruby on Rails is a database of links with description and classification in custom categories.
 
 Icons comes from [icon8](https://icons8.com/).
 
@@ -19,7 +19,7 @@ Icons comes from [icon8](https://icons8.com/).
 ---
 
 ## Demo
-Actually runs on www.LIIIIINKS.com
+Actually runs on www.LIIIIINKS.com (host on Heroku).
 
 ---
 
