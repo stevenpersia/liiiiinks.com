@@ -5,7 +5,7 @@
 
 This application made under Ruby on Rails is a database of links with description and classification in custom categories.
 
-Icons comes from [icon8](https://icons8.com/).
+Icons comes from [icon8](https://icons8.com/). This repository is not maintained anymore.
 
 ---
 
